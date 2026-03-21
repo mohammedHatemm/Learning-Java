@@ -193,4 +193,54 @@ The `Scanner` is connected to an underlying input stream (in this case, `System.
 
 If you don't close the scanner, your program might hold onto the resource, which can lead to a **resource leak**. In a small program, you might not notice any issues, but in larger applications, resource leaks can cause the application to slow down or even crash over time. It is a critical best practice to always release resources when you are finished with them.
 
+---
+
+## Practice Exercises
+
+### Exercise 1: Personal Info Card
+Write a program that declares variables for the following information, then prints them in a formatted card:
+- `String` name
+- `int` age
+- `double` gpa
+- `char` grade
+- `boolean` isGraduated
+
+**Expected Output:**
 ```
+===== Student Card =====
+Name: Ahmed
+Age: 22
+GPA: 3.75
+Grade: A
+Graduated: false
+========================
+```
+
+### Exercise 2: Variable Swap
+Declare two `int` variables `a = 10` and `b = 20`. Swap their values **without using a third variable** (hint: use arithmetic operators). Print the values before and after the swap.
+
+### Exercise 3: Scanner Data Types Practice
+Write a program that asks the user to enter:
+1. Their full name (`nextLine()`)
+2. Their age (`nextInt()`)
+3. Their height in meters (`nextDouble()`)
+4. Their first initial (`next().charAt(0)`)
+
+Then print all the information back. **Challenge:** Handle the `nextLine()` issue that happens after `nextInt()` — figure out why it skips input and how to fix it.
+
+### Exercise 4: Primitive Types Explorer
+Declare one variable of each primitive type (`byte`, `short`, `int`, `long`, `float`, `double`, `char`, `boolean`) and print each one with its size info:
+```
+byte value: 127 (max value for byte)
+short value: 32767 (max value for short)
+...
+```
+**Hint:** Use `Byte.MAX_VALUE`, `Short.MAX_VALUE`, etc.
+
+### Exercise 5: Circle Calculator
+Ask the user to enter the radius of a circle (as `double`). Calculate and display:
+- The area (`Math.PI * r * r`)
+- The circumference (`2 * Math.PI * r`)
+- The diameter (`2 * r`)
+
+Make sure to close the Scanner when done.
